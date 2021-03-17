@@ -4,7 +4,7 @@
 
 .card {
     width: 18rem;
-    margin: 0 40px 30px 20px;
+    margin: 30px 40px 30px 45px;
     display: inline-block;
 }
 
@@ -14,4 +14,14 @@
 .card-text,
 .btn-primary {
     text-align: center;
+}
+
+.show-more-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    margin-bottom: 20px;
 }

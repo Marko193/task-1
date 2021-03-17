@@ -1,33 +1,33 @@
+let btn = document.getElementById('btn').addEventListener('click', fetchData);
+let counter = 0;
+let wrapper = document.getElementById('wrapper');
+
 function fetchData() {
     fetch('https://jsonplaceholder.typicode.com/posts').then(response => {
         return response.json();
-    }).then(data => {
-        let usersId = data.map(postsData => {
-            return `
+    }).then(postsData => {
+        for (let i = 0; i < 20; i++) {
+            wrapper.innerHTML = wrapper.innerHTML + `
             <div class="card">
                     <div class="card-body">
-                    <p class="user-num">User's id: <b>${postsData.userId}</b></p>
-                    <p class="card-num">Number of the post: #<b>${postsData.id}</b></p>
-                    <h5 class="card-title">${postsData.title}</h5>
-                    <p class="card-text">${postsData.body}</p>
+                    <p class="user-num">User's id: <b>${postsData[counter].userId}</b></p>
+                    <p class="card-num">Number of the post: #<b>${postsData[counter].id}</b></p>
+                    <h5 class="card-title">${postsData[counter].title}</h5>
+                    <p class="card-text">${postsData[counter].body}</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>`
-        }).join('');
-        // console.log(html);
-        document
-            .querySelector('.wrapper')
-            .insertAdjacentHTML('afterbegin', usersId);
+            counter = counter + 1;
+        }
     }).catch(error => {
-        console.log(error);
+        countersole.log(error);
     });
 }
-
 
 fetchData();
 
 // let btn = document.getElementById('btn').addEventListener('click', getPost);
-// let con = 0;
+// let counter = 0;
 // let div = document.getElementById('cardDiv');
 
 // function getPost() {
@@ -39,16 +39,16 @@ fetchData();
 //             for (let i = 0; i < 20; i++) {
 //                 div.innerHTML = div.innerHTML + `
 //                 <tr>
-//                     <td>${post[con].userId}</td>
-//                     <td>${post[con].id}</td>
-//                     <td>${post[con].title}</td>
-//                     <td>${post[con].body}</td>
+//                     <td>${post[counter].userId}</td>
+//                     <td>${post[counter].id}</td>
+//                     <td>${post[counter].title}</td>
+//                     <td>${post[counter].body}</td>
 //                 </tr>
 //                 `
-//                 con = con + 1;
+//                 counter = counter + 1;
 //             }
 //         })
 //         .catch(error => {
-//             console.log(error);
+//             countersole.log(error);
 //         })
 // }
