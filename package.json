@@ -1,0 +1,26 @@
+{
+    "name": "task-1",
+    "version": "1.0.0",
+    "description": "Learning Node.js, Express & MongoDB",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "start:prod": "cross-env NODE_ENV=production nodemon app.js",
+        "debug": "ndb app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Marko193/task-1.git"
+    },
+    "author": "Marko Pavlenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Marko193/task-1/issues"
+    },
+    "homepage": "https://github.com/Marko193/task-1#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "nodemon": "^2.0.7"
+    }
+}
