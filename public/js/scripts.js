@@ -23,6 +23,7 @@ function fetchData() {
     });
 }
 
+
 fetchData();
 
 // let btn = document.getElementById('btn').addEventListener('click', getPost);
