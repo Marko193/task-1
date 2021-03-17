@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-.show-more-posts {
+#show-more-posts {
     display: flex;
     justify-content: center;
     align-items: center;
